@@ -12,5 +12,6 @@ variable "race" {
 }
 
 output "price" {
+    
     value = var.race
 }
