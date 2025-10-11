@@ -1,3 +1,5 @@
+#variable "ab" {}  empty variable
+
 variable "a" {
   default = 10
 }
