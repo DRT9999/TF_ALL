@@ -1,1 +1,1 @@
-race = 100RS
+race = 100
