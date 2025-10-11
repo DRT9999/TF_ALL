@@ -7,3 +7,10 @@ variable "a" {
 output "name" {
   value = var.a
 }
+
+variable "race" {
+}
+
+output "price" {
+    value = var.race
+}
