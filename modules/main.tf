@@ -8,5 +8,5 @@ variable "color" {
 }
 
 output "dev" {
-    value = module.test.
+    value = module.test.msg
 }
