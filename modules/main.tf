@@ -3,9 +3,7 @@ module "test" {
     color = var.color
 }
 
-variable "color" {
-    
-}
+variable "color" {}
 
 output "dev" {
     value = module.test.msg
