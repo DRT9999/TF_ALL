@@ -3,7 +3,7 @@ module "App" {
     source = "./app"
     ami = var.ami                               #"ami-0fcc78c828f981df2"
     instance_type = each.value["instance_type"] #try (each.value["instance_type"], null) == ".*" ? each.value["instance_type"] : "t2.small"
-    vpc_security_group_ids = var.vpc_security_group_ids
+    vpc_security_group_ids = [var.vpc_security_group_ids]
     name = each.key   
 }
 
