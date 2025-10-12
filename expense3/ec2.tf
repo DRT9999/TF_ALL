@@ -25,6 +25,7 @@ variable "comp" {
         }
         backend ={
             #instance_type =  "t2.micro"
+            bu = "APP"
         }
   
     }   
