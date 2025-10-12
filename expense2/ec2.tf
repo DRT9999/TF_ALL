@@ -1,4 +1,4 @@
-resource "aws_instance" "frontend" {
+resource "aws_instance" "Expenes" {
     #count = length(var.comp)
     for_each = var.comp
     ami = "ami-0fcc78c828f981df2"
