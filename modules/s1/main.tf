@@ -7,3 +7,8 @@ resource "null_resource" "name" {
 variable "color" {
   
 }
+
+output "msg" {
+    value = "Welcome to world"
+  
+}

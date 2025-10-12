@@ -6,3 +6,7 @@ module "test" {
 variable "color" {
     default = ["red","yellow"]
 }
+
+output "dev" {
+    value = module.test.
+}
