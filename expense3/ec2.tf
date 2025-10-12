@@ -2,11 +2,10 @@ resource "aws_instance" "Expenes" {
     #count = length(var.comp)
     for_each = var.comp
     ami = "ami-0fcc78c828f981df2"
-    instance_type = each.value["instance_type"] == ".*" ? each.value["instance_type"] : "t2.micro"
+    instance_type = each.value["instance_type"] == ".*" ? each.value["instance_type"] : "t2.small"
     vpc_security_group_ids = ["sg-052508cac91923258"] 
 
     tags = {
-
         Name = each.key
         bu = each.value["bu"]
     }
