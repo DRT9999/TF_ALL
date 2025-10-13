@@ -11,3 +11,9 @@ data "aws_security_group" "name" {
     }
 }
 
+data "aws_ami" "example" {
+  executable_users = ["self"]
+  most_recent      = true
+  name_regex       = "DevOps-LabImage-RHEL9"
+  owners           = ["469861001016"]
+}
