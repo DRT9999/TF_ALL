@@ -10,7 +10,7 @@ resource "aws_instance" "Expenes" {
     }
 }
 
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "DNS" {
   zone_id = var.zone_id
   name    = "${var.name}-qa.exp.in"
   type    = "A"
@@ -19,7 +19,10 @@ resource "aws_route53_record" "www" {
 }
 
 resource "null_resource" "exp" {
-  depends_on = [ aws_route53_record.www ,aws_instance.Expenes ]  
+  depends_on = [ aws_route53_record.DNS ,aws_instance.Expenes ]  
+  triggers = {
+    always_run = true
+  }
   provisioner "local-exec" {
     command = "cd /home/ec2-user/Ansible/ALL_ENV_Ansible ; ansible-playbook -i ${aws_instance.Expenes.private_ip}, -e ansible_user=ec2-user -e ansible_password=DevOps321 -e COMP=${var.name} -e env=dev expense.yml"
   }
