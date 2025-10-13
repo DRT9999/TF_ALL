@@ -12,6 +12,6 @@ data "aws_security_group" "name" {
 
 data "aws_ami" "example" {
   most_recent      = true
-  name_regex       = "DevOps-LabImage-RHEL9"
-  owners           = ["self"]
+  name_regex       = "ami-0fcc78c828f981df2"
+  owners           = [""]
 }
