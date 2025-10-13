@@ -7,7 +7,7 @@ data "aws_route53_zone" "main" {
 data "aws_security_group" "name" {
     filter {
       name = "group-name"
-      values = [ "ALL" ]
+      values = [ "default" ]
     }
 }
 
