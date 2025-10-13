@@ -21,7 +21,7 @@ resource "aws_route53_record" "www" {
 resource "null_resource" "exp" {
   depends_on = [ aws_route53_record.www ,aws_instance.Expenes ]  
   provisioner "local-exec" {
-    command = "cd /home/ec2-user/Ansible/ALL_ENV_Ansible ; ansible-playbook -i ${aws_instance.Expenes.private_ip}, -e ansible_user=ec2-user -e ansible_password=DevOps321 -e COMP=${var.name} -e env=dev expense.yml"
+    command = "cd /home/ec2-user/Ansible/ ; ansible-playbook -i ${aws_instance.Expenes.private_ip}, -e ansible_user=ec2-user -e ansible_password=DevOps321 -e COMP=${var.name} -e env=dev expense.yml"
   }
 }
 
