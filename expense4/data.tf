@@ -4,7 +4,10 @@ data "aws_route53_zone" "main" {
   
 }
 
-# output "zone_info" {
-#     value = data.aws_route53_zone.main
-  
-# }
+data "aws_security_group" "name" {
+    filter {
+      name = "group-name"
+      values = [ "ALL" ]
+    }
+}
+
