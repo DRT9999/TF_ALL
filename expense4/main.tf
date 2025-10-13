@@ -5,6 +5,6 @@ module "App" {
     instance_type = each.value["instance_type"] #try (each.value["instance_type"], null) == ".*" ? each.value["instance_type"] : "t2.small"
     vpc_security_group_ids = var.vpc_security_group_ids
     name = each.key
-    zone_id = var.zone_id 
+    zone_id = data.aws_route53_zone.main.id 
 }
 
