@@ -8,6 +8,10 @@ resource "aws_instance" "Expenes" {
     tags = {
         Name = var.name
     }
+    provisioner "local-exec" {
+        command = "sleep 20"
+      
+    }
 }
 
 resource "aws_route53_record" "DNS" {
