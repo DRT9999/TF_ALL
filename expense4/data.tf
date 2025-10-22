@@ -10,7 +10,7 @@ data "aws_security_group" "name" {
     }
 }
 
-data "aws_ami" "example" {
+data "aws_ami" "amiid" {
   most_recent      = true
   name_regex       = "RAVITEJA"  #"ami-0fcc78c828f981df2"
   owners           = ["469861001016"]
