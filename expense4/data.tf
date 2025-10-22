@@ -10,8 +10,8 @@ data "aws_security_group" "name" {
     }
 }
 
-# data "aws_ami" "example" {
-#   most_recent      = true
-#   name_regex       = "DevOps-LabImage-RHEL9"  #"ami-0fcc78c828f981df2"
-#   owners           = ["*"]
-# }
+data "aws_ami" "example" {
+  most_recent      = true
+  name_regex       = "DEVOPS_EXP"  #"ami-0fcc78c828f981df2"
+  owners           = ["469861001016"]
+}
