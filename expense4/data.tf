@@ -11,7 +11,7 @@ data "aws_security_group" "name" {
 }
 
 data "aws_ami" "example" {
-  most_recent      = true
+  #most_recent      = true
   name_regex       = "DEVOPS_EXP"  #"ami-0fcc78c828f981df2"
   owners           = ["469861001016"]
 }
